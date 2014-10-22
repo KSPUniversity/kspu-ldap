@@ -15,7 +15,8 @@
         "php": ">=5.3.3",
         "ext-ldap": "*",
         "doctrine/orm": "~2.4",
-        "symfony/security": "~2.4"
+        "symfony/security": "~2.4",
+        "symfony/monolog-bridge": "~2.4"
     },
     
     "suggest": {

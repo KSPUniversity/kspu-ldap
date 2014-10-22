@@ -103,7 +103,7 @@ class LDAPServiceProvider implements ServiceProviderInterface {
         /** @noinspection PhpParamsInspection */
         $app['security.ldap.logger'] = $app->protect(function($name) use($app) {
             return isset($app['monolog.logger.class'])
-                ? $app['monolog.logger.class']($name)
+                ? new $app['monolog.logger.class']($name)
                 : null;
         });
 
