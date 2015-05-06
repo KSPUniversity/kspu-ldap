@@ -1,5 +1,5 @@
 <?php
-namespace Kspu\LDAP\Entity;
+namespace Kspu\LDAP\Repository;
 
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\Mapping;
