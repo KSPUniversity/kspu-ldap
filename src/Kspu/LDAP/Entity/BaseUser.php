@@ -1,14 +1,11 @@
 <?php
 namespace Kspu\LDAP\Entity;
 
+use FR3D\LdapBundle\Model\LdapUserInterface;
 use Symfony\Component\Security\Core\Role\RoleInterface;
 use Symfony\Component\Security\Core\User\EquatableInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
-use Symfony\Component\Validator\Constraints as Assert;
-
 use Doctrine\ORM\Mapping as ORM;
-
-use FR3D\LdapBundle\Model\LdapUserInterface;
 
 /**
  * @ORM\MappedSuperclass
@@ -17,20 +14,17 @@ abstract class BaseUser implements UserInterface, LdapUserInterface, \Serializab
     /**
      * @ORM\Id
      * @ORM\Column(type="string", length=80, unique=true)
-     * @Assert\NotBlank
      */
     protected $username;
 
     /**
      * @ORM\Column(type="string", length=160, unique=true)
-     * @Assert\Length(max=160)
      */
     protected $dn;
 
     /**
      * @var string
      * @ORM\Column(type="string", length=200)
-     * @Assert\Length(max=200)
      */
     protected $fio;
 

@@ -4,13 +4,11 @@ namespace Kspu\LDAP\Repository;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\Mapping;
 use Doctrine\ORM\UnitOfWork;
-
+use Kspu\LDAP\Entity\UserStoreInterface;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
-
-use Kspu\LDAP\Entity\UserStoreInterface;
 
 abstract class BaseUserRepository extends EntityRepository implements UserStoreInterface, UserProviderInterface {
     /**
