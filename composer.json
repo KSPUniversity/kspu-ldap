@@ -25,7 +25,7 @@
 
     "autoload": {
         "psr-0": {
-            "Kspu\\LDAP": "src/Kspu"
+            "Kspu\\LDAP": "src"
         }
     }
 }
