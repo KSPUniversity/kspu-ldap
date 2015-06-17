@@ -22,6 +22,7 @@ class UserListener implements EventSubscriberInterface
 
     public function authSuccess(AuthenticationEvent $event) {
         $user = $event->getAuthenticationToken()->getUser();
+        if(!is_object($user)) return;
         if(get_class($user) !== $this->repo->getClassName()) return;
         $this->repo->persist($user);
     }
